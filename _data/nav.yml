@@ -14,12 +14,15 @@
     - subtitle: "howto"
       subhref: "/howto/howto.html"
 
-- title: "Links"
+- title: "Go to"
   subcategories:
-    - subtitle: "Brendel Group"
-      subhref: "http://brendelgroup.org"
     - subtitle: "howto"
       subhref: "/howto/howto.html"
+
+- title: "Links"
+  external-subcategories:
+    - subtitle: "Brendel Group"
+      subhref: "http://brendelgroup.org"
     - subtitle: "jekyll"
       subhref: "http://jekyllrb.com/"
     - subtitle: "GitHub pages with jekyll"
