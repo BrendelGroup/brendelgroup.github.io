@@ -1,10 +1,10 @@
 # Site settings
-name: BrendelGroup Theme
+name: BrendelGroup
 email: 
 author: VB
 
 keywords: jekyll, jekyll theme, jekyll framework, stuffthings
-description: Derived from Slim Pickins by Chrianthropic.
+description: Theme derived from Slim Pickins by Chrianthropic
 
 # Only use this if you are serving your site via Github Pages
 github:
