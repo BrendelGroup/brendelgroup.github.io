@@ -1,0 +1,24 @@
+#1. Generate a file of wanted icons using
+	https://icomoon.io/
+	https://icomoon.io/app/#/select
+
+#2. For our site we have selected:
+	home2	(e901)
+	github	(eab0)
+
+#3. Generate fonts and download:
+	icomoon.zip
+	unzip icomoon.zip
+
+#4. Convert fonts to base64:
+	cd fonts
+	base64 -i -w 0 icomoon.woff > icomoon.base64
+
+#5. Edit ../_sass/icomoon/_base.scss and replace INSERT-BASE64-FONTS-HERE by the content of icomoon.base64
+
+@font-face {
+        font-family: 'icomoon';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,INSERT-BASE64-FONTS-HERE) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
