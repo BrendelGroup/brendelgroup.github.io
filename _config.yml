@@ -8,7 +8,7 @@ description: Theme derived from Slim Pickins by Chrianthropic
 
 # Only use this if you are serving your site via Github Pages
 github:
-  url: "https://brendelgroup.github.io/"
+# url: "https://brendelgroup.github.io/"
 
 header: yes
 header_sm: images/RAMOSE-banner-small.jpg

@@ -8,5 +8,5 @@ permalink: /documentation/configuration.html
 * Update your navigation 
   * edit the `_data/nav.yml` file as needed
 * Update your social links
-  * edit the `_data/socials.yml` file as needed
+  * edit the `_data/community.yml` file as needed
 * For google analytics just add your google_universal_analytics ID to the _config.yml file

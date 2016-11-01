@@ -39,8 +39,8 @@ Includes the following variables for easy customization:
 
 **Socials Navbar Settings**
 
-* $socials-font-color
-* $socials-font-size
+* $community-font-color
+* $community-font-size
 
 **Utility**
 
