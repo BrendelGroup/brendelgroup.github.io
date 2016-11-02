@@ -2,19 +2,19 @@
   href: "/"
 
 - title: "Repositories"
+  external-subcategories:
+    - subtitle: "BWASP"
+      subhref: "https://github.com/brendelgroup/BWASP"
+
+- title: "Projects"
   subcategories:
     - subtitle: "Overview"
-      subhref: "/repositories/overview.html"
+      subhref: "/projects/overview.html"
 
 - title: "Blog"
   href: "/blog/"
 
 - title: "Howto"
-  subcategories:
-    - subtitle: "howto"
-      subhref: "/howto/howto.html"
-
-- title: "Go to"
   subcategories:
     - subtitle: "howto"
       subhref: "/howto/howto.html"

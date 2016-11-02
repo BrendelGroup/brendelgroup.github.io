@@ -3,6 +3,7 @@
 	https://icomoon.io/app/#/select
 
 #2. For our site we have selected:
+#set IcoMoon - Free
 	home2	(e901)
 	github	(eab0)
 
@@ -22,3 +23,17 @@
         font-weight: normal;
         font-style: normal;
 }
+
+
+adding jetstream:
+view-source:https://use.jetstream-cloud.org/assets/theme/images/favicon.ico
+... save as jetstream.ico
+gimp jetstream.ico
+... save as PNM file: jetstream.pnm
+potrace-1.13.linux-x86_64/potrace jetstream.pnm -s --flat -o jetstream.svg
+# from http://potrace.sourceforge.net/
+go back to icomoon.io/app/#/select
+import icons:	icomoon.svg (current set)
+import icons:	jetstream.svg
+select all three and generate fonts; as before,with addtion jetstream (e900)
+edit _sass/icomoon/_base.scss and add entry for jetstream
