@@ -23,7 +23,7 @@
       subhref: "https://github.com/brendelgroup/MoVRs/"
 
 - title: "Projects"
-  subcategories:
+  external-subcategories:
     - subtitle: "Overview"
       subhref: "https://brendelgroup.github.io/projects/overview.html"
     - subtitle: "iLoci"
