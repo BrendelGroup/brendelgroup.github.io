@@ -1,21 +1,27 @@
-#1. Generate a file of wanted icons using
+# fonts/0Record - notes on how to create icon fonts for use in the site
+#
+
+
+#1. Generate a file of common, freely available icons using
 	https://icomoon.io/
 	https://icomoon.io/app/#/select
 
-#2. For our site we have selected:
-#set IcoMoon - Free
+#2. For our site we have selected from the IcoMoon - Free set:
 	home2	(e901)
 	github	(eab0)
 
-#3. Generate fonts and download:
+#3. Generate the fonts (at the app site) and download:
 	icomoon.zip
 	unzip icomoon.zip
+#   and check this out
+	firefox demo.html
 
-#4. Convert fonts to base64:
+#4. Convert the fonts to base64:
 	cd fonts
 	base64 -i -w 0 icomoon.woff > icomoon.base64
+	cd ../..
 
-#5. Edit ../_sass/icomoon/_base.scss and replace INSERT-BASE64-FONTS-HERE by the content of icomoon.base64
+#5. Edit _sass/icomoon/_base.scss and replace INSERT-BASE64-FONTS-HERE by the content of icomoon.base64
 
 @font-face {
         font-family: 'icomoon';
@@ -24,16 +30,32 @@
         font-style: normal;
 }
 
+#   and make style change to .icon-home2:before and .icon-home2:hover (and other font entries) as desired
 
-adding jetstream:
-view-source:https://use.jetstream-cloud.org/assets/theme/images/favicon.ico
-... save as jetstream.ico
-gimp jetstream.ico
-... save as PNM file: jetstream.pnm
-potrace-1.13.linux-x86_64/potrace jetstream.pnm -s --flat -o jetstream.svg
-# from http://potrace.sourceforge.net/
-go back to icomoon.io/app/#/select
-import icons:	icomoon.svg (current set)
-import icons:	jetstream.svg
-select all three and generate fonts; as before,with addtion jetstream (e900)
-edit _sass/icomoon/_base.scss and add entry for jetstream
+
+#6. Adding more icons; example: jetstream
+#
+
+#6.1 Get the source:
+ 	wget https://use.jetstream-cloud.org/assets/theme/images/favicon.ico
+	mv favicon.ico jetstream.ico
+#6.2 Use gimp "Export as" to convert jetstream.ico to jetstream.pnm:
+	gimp jetstream.ico
+#6.3 Use potrace (installed via dnf or other Linux package manager, or downloaded
+#    from http://potrace.sourceforge.net/) to convert to jetstream.svg:
+	potrace jetstream.pnm -s --flat -o jetstream.svg
+#6.4 Go back to https://icomoon.io/app/#/select, import icomoon.svg (our current set)
+#    and jetstream.svg, select all three icons (home2, github, jetstream), and proceed
+#    as in Step 3 above; in Step 5, we need to add entries for jetstream (e900).
+
+
+#7. We make use of the icon fonts in _data/community.yml:
+#
+- title: "home2"
+  href: "http://brendelgroup.org/"
+
+- title: "github"
+  href: "https://github.com/brendelgroup/"
+
+- title: "jetstream"
+  href: "https://use.jetstream-cloud.org/application/images"
